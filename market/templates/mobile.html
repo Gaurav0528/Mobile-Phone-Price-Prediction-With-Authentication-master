@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% block title %}
+Registration
+{% endblock%}
+{% block content %}
+<!-- <h1>Register Form</h1> -->
+<body class="text-center">
+    
+<div class="container">
+    <form method="POST" class="form-register" style="color:white">
+        {{ form.hidden_tag() }}
+        <!-- <img class="mb-4" src="https://res.cloudinary.com/jimshapedcoding/image/upload/v1597332609/android-icon-192x192_ove2a7.png" alt=""> -->
+        <br><br>
+        <h1 class="h3 mb-3 font-weight-normal">
+            Please enter your device details carefully
+        </h1>
+        {{ form.Brand.label("Device Brand") }}
+        {{ form.Brand(class="form-control",placeholder="Enter the device brand(eg: Apple, Samsung, Xiomi)") }}
+
+        {{ form.Ratings.label("") }}
+        {{ form.Ratings(class="form-control",placeholder="Enter the device ratings")}}
+        
+        {{ form.Ram.label("RAM") }}
+        {{ form.Ram(class="form-control",placeholder="Enter the RAM ")}}
+
+        {{ form.Rom.label("Storage") }}
+        {{ form.Rom(class="form-control",placeholder="Enter the Internal Storage")}}
+
+        {{ form.Size.label("Screen Size") }}
+        {{ form.Size(class="form-control",placeholder="Enter the Mobile Screen Size")}}
+        
+        {{ form.pixel1.label("Front camera") }}
+        {{ form.pixel1(class="form-control",placeholder="Enter the Front Camera Pixels")}}
+
+        {{ form.pixel2.label("Rear Camera") }}
+        {{ form.pixel2(class="form-control",placeholder="Enter the Rear Camera Pixel")}}
+        
+        {{ form.battery.label("Battery") }}
+        {{ form.battery(class="form-control",placeholder="Enter the battery")}}
+        
+        <br><br>
+
+        
+        <div class="checkbox mb-3">
+            <h6 style="font-size: 20px;">Please check your details before clicking submit!</h6>
+            <!-- <a class="btn btn-sm btn-secondary" href="{{ url_for('login_page') }}">Login</a> -->
+         </div>
+         
+        {{ form.submit(class="btn btn-lg btn-block btn-primary") }}
+    
+        
+    </form>
+</div>
+</body>
+
+{% endblock %}
+
